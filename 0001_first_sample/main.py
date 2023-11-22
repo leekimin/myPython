@@ -24,7 +24,7 @@ logStatus(sourceFilePath, makeFile)
 logFileName = 'wlog_'
 
 # 학회 코드별 csv 파일 분리 작업
-logSplitConf(basePath, makeFileName, logFileName, '809', '810', '887')
+logSplitConf(basePath, makeFileName, logFileName, '111', '222', '333')
 
 # csv 파일 열어서 수작업( 정렬 및 학회명, 세션명 작성 xlsx 전환 )
 
