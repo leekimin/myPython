@@ -12,6 +12,10 @@ def logStatus(sourceFilePath, extractFilePath):
     line_num = 1
     line = sourceFile.readline()
 
+    sourceFileTotal = open(sourceFilePath)
+    total_line = len(sourceFileTotal.readlines())
+    sourceFileTotal.close()
+
     while line:
         # To-Do
         extractFile = open(extractFilePath, "a+") # 없으면 생성 후 오픈
@@ -42,7 +46,7 @@ def logStatus(sourceFilePath, extractFilePath):
 
         # 진행 상황 로깅 넘버링
         if line_num % 100 == 0:
-            print(line_num)
+            print(line_num , ' / ' , total_line)
 
         log = [no1, no2, no3, no4]; # append pop remove로 가능
 
@@ -64,6 +68,10 @@ def logAttendSave(sourceFilePath, extractFilePath):
 
     line_num = 1
     line = sourceFile.readline()
+
+    sourceFileTotal = open(sourceFilePath)
+    total_line = len(sourceFileTotal.readlines())
+    sourceFileTotal.close()
 
     while line:
         extractFile = open(extractFilePath, "a+") # 없으면 생성 후 오픈
@@ -99,7 +107,7 @@ def logAttendSave(sourceFilePath, extractFilePath):
 
         # 진행 상황 로깅 넘버링
         if line_num % 100 == 0:
-            print(line_num)
+            print(line_num , ' / ' , total_line)
 
         log = [no1, no2, no3, no4, no5];
 
@@ -114,3 +122,46 @@ def logAttendSave(sourceFilePath, extractFilePath):
 
     sourceFile.close()
 # logAttendSave end...
+
+# 학회 코드에 맞는 분리 파일명 조합
+def logTargetName(basePath, logFileName, arrTarget, line):
+    fileName = ''
+
+    # 예외는 일단 패스... 다 담긴걸로 판단
+    for d in arrTarget:
+        if (line.find(d) > -1):
+            fileName = d
+
+    return basePath + logFileName + fileName + '.csv'
+
+# 코드별 파일 생성 및 내용 추가
+def logSplitConf(basePath, sourceFile, logFileName, *targetName):
+    print('학회별 로그 분리')
+
+    sourceFilePath = basePath + '' + sourceFile
+
+    sourceFile = open(sourceFilePath)
+
+    line_num = 1
+    line = sourceFile.readline()
+    
+    sourceFileTotal = open(sourceFilePath)
+    total_line = len(sourceFileTotal.readlines())
+    print (total_line)
+    sourceFileTotal.close()
+
+    while line:
+        # 분리할 파일명 생성
+        extractFile = open(logTargetName(basePath, logFileName, targetName, line), "a+")
+        
+        # 진행 상황 로깅 넘버링
+        if line_num % 100 == 0:
+            print(line_num , ' / ' , total_line)
+
+        extractFile.write(line)
+        extractFile.close()
+        
+        line = sourceFile.readline()
+        line_num += 1
+
+    sourceFile.close()
