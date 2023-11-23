@@ -23,9 +23,9 @@ logStatus(sourceFilePath, makeFile)
 # csv 파일명
 logFileName = 'wlog_'
 
-# 학회 코드별 csv 파일 분리 작업
+# 코드별 csv 파일 분리 작업
 logSplitConf(basePath, makeFileName, logFileName, '111', '222', '333')
 
-# csv 파일 열어서 수작업( 정렬 및 학회명, 세션명 작성 xlsx 전환 )
+# csv 파일 열어서 수작업( 엑셀 사용 상태 만들기 xlsx )
 
 print("-" * 88)
