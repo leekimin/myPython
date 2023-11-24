@@ -19,6 +19,13 @@ print(mp3.tag.id)
 """
 전체 태그 정보
 https://github.com/JayRizzo/Random_Scripts/blob/master/track_meta_id3.py#L9
+
+reference
+https://www.last.fm/api/show/track.getInfo
+
+참고
+https://jae04099.tistory.com/entry/2-%EC%9D%8C%EC%95%85-%EA%B2%80%EC%83%89%EC%9A%A9-API-%EC%B0%BE%EC%95%84%EB%B3%B4%EA%B8%B0Lastfm-api
+
 """
 
 
