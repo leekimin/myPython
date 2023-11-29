@@ -4,6 +4,7 @@ echo "######################"
 echo "###Commit Message : $1"
 echo "######################"
 
+
 git pull
 
 git status
