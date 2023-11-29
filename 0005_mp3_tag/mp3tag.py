@@ -205,184 +205,14 @@ pprint.pprint(result)
 
 
 
-data = {"name":"123", "username":"my"}
 
-class User(object):
-    def __init__(self, name, username):
-        self.name = name
-        self.username = username
-
-import json
-#j = json.loads(data)
-u = User(**data)
-
-print(vars(u))
 
 # https://developer.spotify.com/documentation/web-api/reference/search
 
-##################### def
-from typing import List
-from typing import Any
-from dataclasses import dataclass
-import json
-
-@dataclass
-class Image:
-    height: int
-    url: str
-    width: int
-
-    @staticmethod
-    def from_dict(obj: Any) -> 'Image':
-        _height = int(obj.get("height"))
-        _url = str(obj.get("url"))
-        _width = int(obj.get("width"))
-        return Image(_height, _url, _width)
-
-@dataclass
-class ExternalUrls:
-    spotify: str
-
-    @staticmethod
-    def from_dict(obj: Any) -> 'ExternalUrls':
-        _spotify = str(obj.get("spotify"))
-        return ExternalUrls(_spotify)
-
-@dataclass
-class Artist:
-    external_urls: ExternalUrls
-    href: str
-    id: str
-    name: str
-    type: str
-    uri: str
-
-    @staticmethod
-    def from_dict(obj: Any) -> 'Artist':
-        _external_urls = ExternalUrls.from_dict(obj.get("external_urls"))
-        _href = str(obj.get("href"))
-        _id = str(obj.get("id"))
-        _name = str(obj.get("name"))
-        _type = str(obj.get("type"))
-        _uri = str(obj.get("uri"))
-        return Artist(_external_urls, _href, _id, _name, _type, _uri)
-
-@dataclass
-class Album:
-    album_type: str
-    artists: List[Artist]
-    available_markets: List[str]
-    external_urls: ExternalUrls
-    href: str
-    id: str
-    images: List[Image]
-    name: str
-    release_date: str
-    release_date_precision: str
-    total_tracks: int
-    type: str
-    uri: str
-
-    @staticmethod
-    def from_dict(obj: Any) -> 'Album':
-        _album_type = str(obj.get("album_type"))
-        _artists = [Artist.from_dict(y) for y in obj.get("artists")]
-        _available_markets = [Artist.from_dict(y) for y in obj.get("available_markets")]
-        _external_urls = ExternalUrls.from_dict(obj.get("external_urls"))
-        _href = str(obj.get("href"))
-        _id = str(obj.get("id"))
-        _images = [Image.from_dict(y) for y in obj.get("images")]
-        _name = str(obj.get("name"))
-        _release_date = str(obj.get("release_date"))
-        _release_date_precision = str(obj.get("release_date_precision"))
-        _total_tracks = int(obj.get("total_tracks"))
-        _type = str(obj.get("type"))
-        _uri = str(obj.get("uri"))
-        return Album(_album_type, _artists, _available_markets, _external_urls, _href, _id, _images, _name, _release_date, _release_date_precision, _total_tracks, _type, _uri)
-
-@dataclass
-class ExternalIds:
-    isrc: str
-
-    @staticmethod
-    def from_dict(obj: Any) -> 'ExternalIds':
-        _isrc = str(obj.get("isrc"))
-        return ExternalIds(_isrc)
-
-
-@dataclass
-class Item:
-    album: Album
-    artists: List[Artist]
-    available_markets: List[str]
-    disc_number: int
-    duration_ms: int
-    explicit: str
-    external_ids: ExternalIds
-    external_urls: ExternalUrls
-    href: str
-    id: str
-    is_local: str
-    name: str
-    popularity: int
-    preview_url: str
-    track_number: int
-    type: str
-    uri: str
-
-    @staticmethod
-    def from_dict(obj: Any) -> 'Item':
-        _album = Album.from_dict(obj.get("album"))
-        _artists = [Artist.from_dict(y) for y in obj.get("artists")]
-        _available_markets = [Artist.from_dict(y) for y in obj.get("available_markets")]
-        _disc_number = int(obj.get("disc_number"))
-        _duration_ms = int(obj.get("duration_ms"))
-        _explicit = str(obj.get("explicit"))
-        _external_ids = ExternalIds.from_dict(obj.get("external_ids"))
-        _external_urls = ExternalUrls.from_dict(obj.get("external_urls"))
-        _href = str(obj.get("href"))
-        _id = str(obj.get("id"))
-        _is_local = str(obj.get("is_local"))
-        _name = str(obj.get("name"))
-        _popularity = int(obj.get("popularity"))
-        _preview_url = str(obj.get("preview_url"))
-        _track_number = int(obj.get("track_number"))
-        _type = str(obj.get("type"))
-        _uri = str(obj.get("uri"))
-        return Item(_album, _artists, _available_markets, _disc_number, _duration_ms, _explicit, _external_ids, _external_urls, _href, _id, _is_local, _name, _popularity, _preview_url, _track_number, _type, _uri)
-
-@dataclass
-class Tracks:
-    href: str
-    items: List[Item]
-    limit: int
-    next: str
-    offset: int
-    previous: str
-    total: int
-
-    @staticmethod
-    def from_dict(obj: Any) -> 'Tracks':
-        _href = str(obj.get("href"))
-        _items = [Item.from_dict(y) for y in obj.get("items")]
-        _limit = int(obj.get("limit"))
-        _next = str(obj.get("next"))
-        _offset = int(obj.get("offset"))
-        _previous = str(obj.get("previous"))
-        _total = int(obj.get("total"))
-        return Tracks(_href, _items, _limit, _next, _offset, _previous, _total)
-
-@dataclass
-class Root:
-    tracks: Tracks
-
-    @staticmethod
-    def from_dict(obj: Any) -> 'Root':
-        _tracks = Tracks.from_dict(obj.get("tracks"))
-        return Root(_tracks)
 
 
 
+"""
 ddd = {
 	"tracks": {
 		"href": "https://api.spotify.com/v1/search?query=Song+2&type=track&offset=0&limit=1",
@@ -404,7 +234,7 @@ ddd = {
 					],
 					"available_markets": [
 						"AR",
-						"XK"
+						"XK","XK","XK","XK"
 					],
 					"external_urls": {
 						"spotify": "https://open.spotify.com/album/7HvIrSkKGJCzd8AKyjTJ6Q"
@@ -478,8 +308,16 @@ ddd = {
 		"total": 617
 	}
 }
+"""
+# obj2 = json.loads(ddd)
 
+# pprint.pprint(len(ddd['tracks']['items'][0]['album']['available_markets']))
+"""
+markets = ddd['tracks']['items'][0]['album']['available_markets']
 
-ttt = Tracks(**ddd)
+for key, val in ddd.items():
+    print(key)
+"""
+#ttt = Tracks(**ddd)
 
-print(ttt)
+#print(ttt)
