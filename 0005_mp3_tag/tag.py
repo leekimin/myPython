@@ -8,8 +8,9 @@ from pathlib import Path
 from func import get_spotify_search, track_info
 import pandas as pd
 
-print("*" * 50, 'start')
+print("*" * 70, 'start')
 
+# 음원파일 루트 경로
 rootdir = r'D:\_my\sample'
 
 """
@@ -75,12 +76,46 @@ eyed3.log.setLevel("ERROR")
 eyed3 documentation
 https://eyed3.readthedocs.io/en/latest/
 """
+import pandas as pd
+from pandas import DataFrame
+
+resAlbums = spo.artist_albums(artist_id='7MhMgCo0Bl0Kukl93PZbYS', limit=22)
+
+dicAlbum = [];
+
+cnts = 0
+for alb in resAlbums['items']:
+    cnts = cnts + 1
+    #print('반복...', cnts)
+    #print(cnts, alb['name'], alb['release_date'], alb['id'], alb['total_tracks'], alb['type'])
+    #dicAlbum.append(alb['name'], alb['release_date'], alb['id'], alb['total_tracks'], alb['type']);
+    dicAlbum.append(
+        dict(
+            name=alb['name'], 
+            release_date=alb['release_date'],
+            id=alb['id'],
+            total_tracks=alb['total_tracks'],
+            type=alb['type']
+            # images=alb['images'][0]['url']
+        )
+    )
+    
+dtFrame = DataFrame(dicAlbum)
+print(dtFrame)
+# print(len(dtFrame))
+# dtFrame.to_html('test.html')
+# dtFrame.to_csv('test.csv')
+
+from mutagen.id3 import USLT, ID3
 
 # 파일의 tag 정보 읽고 API 정보와 비교
 for mp3 in arrList:
     #print(eyed3.id3.ID3_V2_2)
     #print(mp3.debug())
     #track_info(mp3.full_path)
+
+    # 앨범 커버 등록 ( file open or url open)
+    """
     mp3_tmp = eyed3.load(mp3.full_path)
     for img in mp3_tmp.tag.images:
         print(img)
@@ -91,10 +126,33 @@ for mp3 in arrList:
     # image add from file
     #img_tmp = open('cover.png', 'rb')
     #mp3_tmp.tag.images.set(3, img_tmp.read(), 'image/png', u'')
-    mp3_tmp.tag.save()
+    #mp3_tmp.tag.images.set(3, '', '', u'', 'http://localhost:8800/test.png')
+    #mp3_tmp.tag.save()
+    """
+    # 가사 등록 / 제거 - 가사 API 연동까지하면 Good! ( UNSYNCEDLYRICS )
+    """
+    mp3_lyrics = ID3(mp3.full_path)
 
-    # UNSYNCEDLYRICS
+    #mp3_lyrics.add(USLT(text='gasa in for custom333', lang='eng'))
+    #mp3_lyrics.add(USLT(text='gasa in for custom333'))
+    #mp3_lyrics.setall('USLT::XXX', '')
+    #mp3_lyrics.save()
     
+    pprint.pprint(mp3_lyrics)
+    #pprint.pprint(mp3_lyrics['USLT::XXX'])
+    #pprint.pprint(mp3_lyrics['USLT::eng'])
+
+    # https://eyed3.readthedocs.io/en/latest/_modules/eyed3/id3/frames.html
+    # b"ULT": b"USLT",  # UNSYNCEDLYRICS unsynchronised lyrics/text transcription
+    # b"STC": b"SYTC",  # SYNCEDTEMPO synchronised tempo codes
+    # b"SLT": b"SYLT",  # SYNCEDLYRICS synchronised lyrics/text
+
+    if "USLT::XXX" in mp3_lyrics:
+        print('USLT::XXX is exist =>', mp3_lyrics['USLT::XXX'])
+    else:
+        print('not exist')
+    """
+
     #print(mp3_tmp.tag.album, mp3_tmp.tag.getBestDate(), mp3_tmp.tag.title)
     #print(mp3_tmp.tag.header.version)
     #print(mp3_tmp.tag.isV1())
@@ -102,16 +160,13 @@ for mp3 in arrList:
     #print(mp3_tmp.tag.header.major_version)
     #print(mp3_tmp.tag.header.minor_version)
     #print(mp3_tmp.tag.header.rev_version)
+    
     """
-    res = spo.search(mp3.track + ' year:2003', limit=1, type="track")
+    res = spo.search(mp3.track, limit=50, type="track")
 
     cnt = 0
     
     for item in res['tracks']['items']:
-        cnt = cnt + 1
-        
-        print('*' * 50, 'item data', cnt)
-        
         artist_name = item['album']['artists'][0]['name'] 
         album_name = item['album']['name']
         release_date = item['album']['release_date']
@@ -120,20 +175,23 @@ for mp3 in arrList:
         track_name = item['name']
         track_num = item['track_number']
 
-        print("*" * 50, 'search...')
-        print("* artist_name :", artist_name)
-        print("* album_name :", album_name)
-        print("* release_date :", release_date)
-        print("* disc_num :", disc_num)
-        print("* track_name :", track_name)
-        print("* track_num :", track_num)
+        if artist_name == 'Hoobastank':
+            cnt = cnt + 1
+            print('*' * 50, 'item data', cnt)
+            print("*" * 50, 'search...')
+            print("* artist_name :", artist_name)
+            print("* album_name :", album_name)
+            print("* release_date :", release_date)
+            print("* disc_num :", disc_num)
+            print("* track_name :", track_name)
+            print("* track_num :", track_num)
     """
 
 #df = pd.DataFrame([{"a":"123"},{"a":"444"}])
 #print(df)
 #print(df.index[1])
 
-print("*" * 50, 'end')
+print("*" * 70, 'end')
 
 
 
