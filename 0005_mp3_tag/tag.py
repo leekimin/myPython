@@ -78,12 +78,11 @@ https://eyed3.readthedocs.io/en/latest/
 """
 
 # artists 검색
-"""
-resArtists = spo.search(q="Linkin Park", limit=10, type="artist")
+
+resArtists = spo.search(q="Zone", limit=10, type="artist", market="JP")
 for art in resArtists['artists']['items']:
     print(art['name'], ',', art['id'])
 exit()
-"""
 
 import pandas as pd
 from pandas import DataFrame
@@ -94,7 +93,7 @@ print(len(read_csv))
 exit()
 """
 
-resAlbums = spo.artist_albums(artist_id='13Y7h239f3l2knkpG5O7Uo', limit=30, offset=0, album_type='album')
+resAlbums = spo.artist_albums(artist_id='4H1S8RTYv4vN3SiM5uSZSa', limit=30, offset=0, album_type='album')
 #pprint.pprint(resAlbums)
 #exit()
 dicAlbum = []
@@ -107,7 +106,7 @@ for alb in resAlbums['items']:
     #dicAlbum.append(alb['name'], alb['release_date'], alb['id'], alb['total_tracks'], alb['type'])
     dicAlbum.append(
         dict(
-            artist_id=alb['artists'][0]['id'],
+            #artist_id=alb['artists'][0]['id'],
             artist_name=alb['artists'][0]['name'],
             name=alb['name'], 
             release_date=alb['release_date'],
