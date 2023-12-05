@@ -1,5 +1,5 @@
-from defUtils import logStatus, logAttendSave, logSplitConf
-from stopwatch import Stopwatch
+from defUtils import logStatus, logAttendSave, logSplitConf, StopWatch
+import sys, os, platform
 
 print("-" * 88)
 
@@ -8,20 +8,30 @@ logStatus('D:\\_my\\test.txt', 'D:\\_my\\testResult.txt')
 logAttendSave('D:\\_my\\test.txt', 'D:\\_my\\testResult.txt')
 """
 
-stopwatch = Stopwatch(2)
+stopwatch = StopWatch()
 stopwatch.start()
 
+if len(sys.argv) == 1:
+    print('입력인자 필수 > python3 main.py filename')
+    exit()
+
+target_file = sys.argv[1]
+
+# 대상 로그에서 1차 데이터 추출
+# os.system('linux command execute')
+
 # 파일하나로 머지
-basePath = r'D:\\_my\\1105_conf\\20231203\\'
+#basePath = r'D:\\_my\\1105_conf\\20231203\\'
+basePath = r'/var/log/app/tomcat/wapi/extractpy/'
 
 # 로그 취합할 하나의 로그 파일명
 makeFileName = 'wLog_Total.csv'
 makeFile = basePath + makeFileName
 
-sourceFilePath = basePath + 'wLog_AttendSave.log'
+sourceFilePath = basePath + 'wLogA.log'
 logAttendSave(sourceFilePath, makeFile)
 
-sourceFilePath = basePath + 'wLog_Status.log'
+sourceFilePath = basePath + 'wLogS.log'
 logStatus(sourceFilePath, makeFile)
 
 # csv 파일명
@@ -34,5 +44,5 @@ logFileName = 'wlog_'
 
 stopwatch.stop()
 
-print("실행 시간 :", str(stopwatch))
+print("실행 시간 :", stopwatch.get_elapsed_seconds())
 print("-" * 88)

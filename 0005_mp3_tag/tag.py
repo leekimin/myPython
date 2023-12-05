@@ -76,27 +76,45 @@ eyed3.log.setLevel("ERROR")
 eyed3 documentation
 https://eyed3.readthedocs.io/en/latest/
 """
+
+# artists 검색
+"""
+resArtists = spo.search(q="Linkin Park", limit=10, type="artist")
+for art in resArtists['artists']['items']:
+    print(art['name'], ',', art['id'])
+exit()
+"""
+
 import pandas as pd
 from pandas import DataFrame
 
-resAlbums = spo.artist_albums(artist_id='7MhMgCo0Bl0Kukl93PZbYS', limit=22)
+"""
+read_csv = pd.read_csv('artists.csv', encoding="UTF-8")
+print(len(read_csv))
+exit()
+"""
 
-dicAlbum = [];
+resAlbums = spo.artist_albums(artist_id='13Y7h239f3l2knkpG5O7Uo', limit=30, offset=0, album_type='album')
+#pprint.pprint(resAlbums)
+#exit()
+dicAlbum = []
 
 cnts = 0
 for alb in resAlbums['items']:
     cnts = cnts + 1
     #print('반복...', cnts)
     #print(cnts, alb['name'], alb['release_date'], alb['id'], alb['total_tracks'], alb['type'])
-    #dicAlbum.append(alb['name'], alb['release_date'], alb['id'], alb['total_tracks'], alb['type']);
+    #dicAlbum.append(alb['name'], alb['release_date'], alb['id'], alb['total_tracks'], alb['type'])
     dicAlbum.append(
         dict(
+            artist_id=alb['artists'][0]['id'],
+            artist_name=alb['artists'][0]['name'],
             name=alb['name'], 
             release_date=alb['release_date'],
             id=alb['id'],
             total_tracks=alb['total_tracks'],
-            type=alb['type']
-            # images=alb['images'][0]['url']
+            type=alb['type'],
+            #images=alb['images'][0]['url'],
         )
     )
     
@@ -104,7 +122,7 @@ dtFrame = DataFrame(dicAlbum)
 print(dtFrame)
 # print(len(dtFrame))
 # dtFrame.to_html('test.html')
-# dtFrame.to_csv('test.csv')
+#dtFrame.to_csv('test.csv', encoding="UTF-8")
 
 from mutagen.id3 import USLT, ID3
 
