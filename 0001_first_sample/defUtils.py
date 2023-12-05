@@ -16,10 +16,10 @@ def logStatus(sourceFilePath, extractFilePath):
     total_line = len(sourceFileTotal.readlines())
     sourceFileTotal.close()
 
-    while line:
-        # To-Do
-        extractFile = open(extractFilePath, "a+") # 없으면 생성 후 오픈
+    # To-Do
+    extractFile = open(extractFilePath, "a+") # 없으면 생성 후 오픈
 
+    while line:
         # 정규식으로 로그시간, 참여자코드, 학회시퀀스, 세션시퀀스 추출
         no1Tmp = line[0:23] # 로그 시간
         no2Tmp = re.findall(r'Wdd_Ses_UID=[0-9]+', line) # 참여자 코드
@@ -52,11 +52,11 @@ def logStatus(sourceFilePath, extractFilePath):
 
         # 추출 문서에 기록
         extractFile.write(','.join(log) + "\n")
-        extractFile.close()
 
         line = sourceFile.readline()
         line_num += 1
 
+    extractFile.close()
     sourceFile.close()
 # logStatus end...
 
@@ -73,15 +73,16 @@ def logAttendSave(sourceFilePath, extractFilePath):
     total_line = len(sourceFileTotal.readlines())
     sourceFileTotal.close()
 
-    while line:
-        extractFile = open(extractFilePath, "a+") # 없으면 생성 후 오픈
+    extractFile = open(extractFilePath, "a+") # 없으면 생성 후 오픈
 
+    while line:
         # 정규식으로 로그시간, 참여자코드, 학회시퀀스, 세션시퀀스, 입퇴장여부 추출
         no1Tmp = line[0:23] # 로그 시간
         no2Tmp = re.findall(r'Wdd_Ses_UID=[0-9]+', line) # 참여자 코드
         no3Tmp = re.findall(r'Wdd_Ses_SympSEQ=[0-9]+', line) # 학회 시퀀스
         no4Tmp = re.findall(r'\SESS_SEQ\"\:[0-9]+', line) # 세션 시퀀스
         no5Tmp = re.findall(r'InYN\"\:\"[YN]\"', line)
+
 
         no1 = ''
         no2 = ''
@@ -115,11 +116,10 @@ def logAttendSave(sourceFilePath, extractFilePath):
         if len(no2Tmp) > 0 or len(no3Tmp) > 0 or len(no4Tmp) > 0 or len(no5Tmp) > 0:
             extractFile.write(','.join(log) + "\n")
         
-        extractFile.close()
-        
         line = sourceFile.readline()
         line_num += 1
 
+    extractFile.close()
     sourceFile.close()
 # logAttendSave end...
 
