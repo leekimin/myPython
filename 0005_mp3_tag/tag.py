@@ -77,15 +77,25 @@ eyed3 documentation
 https://eyed3.readthedocs.io/en/latest/
 """
 
-# artists 검색
+import pandas as pd
+from pandas import DataFrame
 
-resArtists = spo.search(q="Zone", limit=10, type="artist", market="JP")
+tempcsv = pd.read_csv('temp.csv', encoding='UTF-8', header=None, index_col=None)
+#pprint.pprint(tempcsv)
+for idx, row in tempcsv.iterrows():
+    print('=' * 10)
+    print(idx, row)
+
+
+#dtFrame2 = DataFrame(tempcsv)
+#dtFrame2.to_csv('temp.csv', encoding='UTF-8', header=None, index=None)
+exit()
+
+# artists 검색
+resArtists = spo.search(q="Zone", limit=3, type="artist")
 for art in resArtists['artists']['items']:
     print(art['name'], ',', art['id'])
 exit()
-
-import pandas as pd
-from pandas import DataFrame
 
 """
 read_csv = pd.read_csv('artists.csv', encoding="UTF-8")
