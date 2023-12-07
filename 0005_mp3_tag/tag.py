@@ -38,19 +38,30 @@ class Music:
         print('* track : ', self.track)
         print('* full_path : ', self.full_path)
 
-arrList = list()
+arrFileList = list()
+arrFolderList = list()
 
 def listdirs(rootdir):
     for it in os.scandir(rootdir):
         if it.is_dir():
             listdirs(it)
+            d = Music(it.name, 0, it.path)
+            arrFolderList.append(d)
         if it.is_file() and (it.name.find('.mp3') > -1 or it.name.find('.flac') > -1):
             p = Path(it.path)
             n, e = os.path.splitext(it.name)
             m = Music(p.parent.name, n, it.path)
-            arrList.append(m)
+            arrFileList.append(m)
 
 listdirs(rootdir)
+
+# 가수명만 뽑자. 디렉토리 구조는 개인 취향이라 가수명이 존재하는 폴더 레벨로 일괄 수집
+for f in arrFolderList:
+    depth = len(f.full_path.split('\\'))
+    name = f.artist
+    if depth == 4:
+        print(f"Depth : {depth}, {name}")
+exit()
 
 # Spotify API key 준비
 file_path = './secrets.json'
