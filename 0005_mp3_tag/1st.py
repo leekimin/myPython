@@ -68,6 +68,7 @@ print(dtFrame)
 
 dtFrame.to_csv(artist_tmp_file_name)
 
+# https://skillmemory.tistory.com/entry/Pandas-1-csv-%EB%8D%B0%EC%9D%B4%ED%83%80-%EC%9D%BD%EA%B3%A0-%EC%B2%98%EB%A6%AC-%EC%B6%94%EA%B0%80-%EC%A0%80%EC%9E%A5
 # 폴더 목록 조회
 # 폴더 레벨에 따른 가수명 수집
 # csv 파일 생성 및 수정
