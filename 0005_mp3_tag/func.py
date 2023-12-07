@@ -1,5 +1,37 @@
 import eyed3
-import time
+import time, os
+from pathlib import Path
+
+class Music:
+    artist : str # 상위 폴더명이라 아티스트 또는 앨범명
+    track : str 
+    full_path : str
+
+    def __init__(self, artist, track, full_path) -> None:
+        self.artist = artist
+        self.track = track
+        self.full_path = full_path
+
+    def debug(self):
+        print('*' * 40, 'debug')
+        print('* artist : ', self.artist)
+        print('* track : ', self.track)
+        print('* full_path : ', self.full_path)
+
+arrFileList = list()
+arrFolderList = list()
+
+def listdirs(rootdir):
+    for it in os.scandir(rootdir):
+        if it.is_dir():
+            listdirs(it)
+            d = Music(it.name, 0, it.path)
+            arrFolderList.append(d)
+        if it.is_file() and (it.name.find('.mp3') > -1 or it.name.find('.flac') > -1):
+            p = Path(it.path)
+            n, e = os.path.splitext(it.name)
+            m = Music(p.parent.name, n, it.path)
+            arrFileList.append(m)
 
 def get_spotify_search():
     print('api')
