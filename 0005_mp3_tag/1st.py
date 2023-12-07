@@ -36,13 +36,16 @@ listdirs(rootPath)
 
 artist_tmp_file_name = 'artists_tmp.csv'
 
+tempcsv = None
+
 try:
-    tempcsv = pd.read_csv(artist_tmp_file_name, encoding='UTF-8', header=None, index_col=0).to_dict()
-    print(tempcsv)
+    tempcsv = pd.read_csv(artist_tmp_file_name, encoding='UTF-8', header=None, index_col=0)
+    print(tempcsv.dtypes)
     print(type(tempcsv))
     print('-' * 50)
 except:
     print('파일 내용 없음')
+    tempcsv = pd.DataFrame(None)
 
 dictArtists = []
 
@@ -56,14 +59,14 @@ for d in arrFolderList:
                 id=''
             )
         )
-        tempcsv[1][d.artist] = ''
+        
 
 # print(tempcsv)
 
-dtFrame = pd.DataFrame(tempcsv)
+dtFrame = pd.DataFrame(dictArtists)
 print(dtFrame)
 
-# dtFrame.to_csv(artist_tmp_file_name, index=None)
+dtFrame.to_csv(artist_tmp_file_name)
 
 # 폴더 목록 조회
 # 폴더 레벨에 따른 가수명 수집
