@@ -28,45 +28,44 @@ depth = int(sys.argv[2])
 
 # D:\_my\sample\
 print('=' * 50, '')
-print(f'rootPath : {rootPath}, depths : {depth}')
+print(f'artist collect > rootPath : {rootPath}, depths : {depth}')
 print('=' * 50, '')
 
 # 디렉토리 폴더명(가수명) 조회
 listdirs(rootPath)
 
+# 생성할 파일명 (csv)
 artist_tmp_file_name = 'artists_tmp.csv'
 
-tempcsv = None
-
 try:
-    tempcsv = pd.read_csv(artist_tmp_file_name, encoding='UTF-8', header=None, index_col=0)
-    print(tempcsv.dtypes)
-    print(type(tempcsv))
-    print('-' * 50)
+    artist_csv = pd.read_csv(artist_tmp_file_name, encoding='UTF-8', header=0, index_col=0)
+    #print(artist_csv.dtypes)
+    #print(type(artist_csv))
+    #print('-' * 50)
 except:
-    print('파일 내용 없음')
-    tempcsv = pd.DataFrame(None)
+    print('Msg > new File Create')
+    artist_csv = pd.DataFrame(None)
 
-dictArtists = []
-
+# 폴더명에서 데이터 검색
 for d in arrFolderList:
     depth_tmp = len(d.full_path.split('\\'))
     if depth_tmp == 4:
-        # print(d.artist, d.full_path, depth_tmp)
-        dictArtists.append(
-            dict(
-                artist=d.artist,
-                id=''
-            )
-        )
-        
+        # Data가 없으면 key가 없어서 분기 처리
+        if len(artist_csv) == 0:
+            #print('첫 데이터는 append')
+            row_tmp = pd.DataFrame([{"artist":d.artist, "id":"", "track":"", "album":""}])
+            artist_csv = pd.concat([artist_csv, row_tmp], ignore_index=True)
+        else:
+            #print('중복 체크 후 append')
+            is_exists = artist_csv['artist'] == d.artist
+            if len(artist_csv[is_exists]) == 0:
+                row_tmp = pd.DataFrame([{"artist":d.artist, "id":"", "track":"", "album":""}])
+                artist_csv = pd.concat([artist_csv, row_tmp], ignore_index=True)
 
-# print(tempcsv)
+print('총 카운트 :', len(artist_csv))
+print('=' * 50)
 
-dtFrame = pd.DataFrame(dictArtists)
-print(dtFrame)
-
-dtFrame.to_csv(artist_tmp_file_name)
+artist_csv.to_csv(artist_tmp_file_name)
 
 # https://skillmemory.tistory.com/entry/Pandas-1-csv-%EB%8D%B0%EC%9D%B4%ED%83%80-%EC%9D%BD%EA%B3%A0-%EC%B2%98%EB%A6%AC-%EC%B6%94%EA%B0%80-%EC%A0%80%EC%9E%A5
 # 폴더 목록 조회
