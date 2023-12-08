@@ -46,6 +46,8 @@ for idx, row in artist_csv.iterrows():
         if row['artist'] == art['name']:
             print(art['name'], ',', art['id'])
             artist_csv.at[idx, 'id'] = art['id']
+        else:
+            print('미일치 :', row['artist'], art['name'])
     time.sleep(1) # 과다 호출 방지 ㅎㅎ
     
 print('-' * 50)
@@ -70,7 +72,9 @@ for idx, row in artist_csv.iterrows():
             print(cnt, artist_id, artist_name, album_name, release_date, album_id, total_track, album_type)
         #if cnt == 16:
         #    pprint.pprint(alb)
+    time.sleep(2)
     # spo.artist_top_tracks(artist_id=row['id'])
 
 # 결과 저장
 # artist_csv.to_csv(artist_file_name)
+print('-' * 50)
