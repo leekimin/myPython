@@ -53,13 +53,13 @@ for d in arrFolderList:
         # Data가 없으면 key가 없어서 분기 처리
         if len(artist_csv) == 0:
             #print('첫 데이터는 append')
-            row_tmp = pd.DataFrame([{"artist":d.artist, "id":"", "track":"", "album":""}])
+            row_tmp = pd.DataFrame([{"artist":d.artist, "id":"", "track":"", "album":"", "track_id":"", "album_id":"", "album_year":""}])
             artist_csv = pd.concat([artist_csv, row_tmp], ignore_index=True)
         else:
             #print('중복 체크 후 append')
             is_exists = artist_csv['artist'] == d.artist
             if len(artist_csv[is_exists]) == 0:
-                row_tmp = pd.DataFrame([{"artist":d.artist, "id":"", "track":"", "album":""}])
+                row_tmp = pd.DataFrame([{"artist":d.artist, "id":"", "track":"", "album":"", "track_id":"", "album_id":"", "album_year":""}])
                 artist_csv = pd.concat([artist_csv, row_tmp], ignore_index=True)
 
 print('총 카운트 :', len(artist_csv))
