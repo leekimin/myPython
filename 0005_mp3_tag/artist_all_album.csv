@@ -1,0 +1,136 @@
+,artist_id,artist_name,album_id,album_name,total_tracks,release_date,release_date_precision,album_type,track_id,track_number,track_name,use_yn
+0,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,5Jp4JAv58ESLgp4dpHtENX,Push Pull,11,2018-05-25,day,album,1MmJpVNA2If2zcbMiwQkBA,1,Don't Look Away,N
+1,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,5Jp4JAv58ESLgp4dpHtENX,Push Pull,11,2018-05-25,day,album,1EwiRngO7t5bQXvbin9JN8,2,Push Pull,N
+2,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,5Jp4JAv58ESLgp4dpHtENX,Push Pull,11,2018-05-25,day,album,7MAkNlqK2OswKoTiD96fgw,3,More Beautiful,N
+3,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,5Jp4JAv58ESLgp4dpHtENX,Push Pull,11,2018-05-25,day,album,0k2UlBvcUk63I59S8TYibo,4,Head over Heels,N
+4,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,5Jp4JAv58ESLgp4dpHtENX,Push Pull,11,2018-05-25,day,album,1Ig8iwwux4d7XJrYxyeoTG,5,True Believer,N
+5,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,5Jp4JAv58ESLgp4dpHtENX,Push Pull,11,2018-05-25,day,album,1ZedsEgdLt59RIxhL8Zpix,6,Just Let Go (Who Cares If We Fall),N
+6,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,5Jp4JAv58ESLgp4dpHtENX,Push Pull,11,2018-05-25,day,album,1YGpbCLud7zbcYES9EF11w,7,Better Left Unsaid,N
+7,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,5Jp4JAv58ESLgp4dpHtENX,Push Pull,11,2018-05-25,day,album,4I18hV8Df1aAHjWFi4JP7m,8,We Don't Need the World,N
+8,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,5Jp4JAv58ESLgp4dpHtENX,Push Pull,11,2018-05-25,day,album,6qJEtLrrKwx6MWeVrX04jU,9,Buzzkill (Before You Say Goodbye),N
+9,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,5Jp4JAv58ESLgp4dpHtENX,Push Pull,11,2018-05-25,day,album,0nQxnWhabjfg4KNb6NivQD,10,Fallen Star,N
+10,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,5Jp4JAv58ESLgp4dpHtENX,Push Pull,11,2018-05-25,day,album,1x4JtShZM5w4dIve9a9suN,11,There Will Never Be Another One,N
+11,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2GzmwROaljWszhqH1gU4GI,Fight Or Flight,11,2012-09-11,day,album,4e3VRzXK40MUwbPfogchrz,1,This Is Gonna Hurt,N
+12,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2GzmwROaljWszhqH1gU4GI,Fight Or Flight,11,2012-09-11,day,album,3Ir2NsFlQzdnjvmgvI1Djz,2,You Before Me,N
+13,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2GzmwROaljWszhqH1gU4GI,Fight Or Flight,11,2012-09-11,day,album,1FELVIec9RFfxcAntSYz0Q,3,The Fallen,N
+14,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2GzmwROaljWszhqH1gU4GI,Fight Or Flight,11,2012-09-11,day,album,3RMvYC4dfnSUFYz0h3Za9L,4,Can You Save Me?,N
+15,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2GzmwROaljWszhqH1gU4GI,Fight Or Flight,11,2012-09-11,day,album,4ecszjB7P585TotGF3Sbon,5,No Destination,N
+16,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2GzmwROaljWszhqH1gU4GI,Fight Or Flight,11,2012-09-11,day,album,7FZKLhjOizPuDHSyzPbrmW,6,Slow Down,N
+17,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2GzmwROaljWszhqH1gU4GI,Fight Or Flight,11,2012-09-11,day,album,5EA6MxI0ANgGtgLGE1iBeQ,7,No Win Situation,N
+18,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2GzmwROaljWszhqH1gU4GI,Fight Or Flight,11,2012-09-11,day,album,54erS1FPjxYog1EjJ86cqX,8,Sing What You Can't Say,N
+19,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2GzmwROaljWszhqH1gU4GI,Fight Or Flight,11,2012-09-11,day,album,5LesidArYBuomWQ2Z2WdHo,9,Magnolia,N
+20,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2GzmwROaljWszhqH1gU4GI,Fight Or Flight,11,2012-09-11,day,album,5hBU4hUhdpVaUeF2AGjxmQ,10,Incomplete,N
+21,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2GzmwROaljWszhqH1gU4GI,Fight Or Flight,11,2012-09-11,day,album,4RztzcT0qBN2oHStMpwWql,11,A Thousand Words,N
+22,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4IH5J6MIW8rygpwG6T5Vk3,Is This The Day?,13,2010-01-01,day,album,3FidtnvCKndpFdbYGPdMHQ,1,Just One - Acoustic,N
+23,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4IH5J6MIW8rygpwG6T5Vk3,Is This The Day?,13,2010-01-01,day,album,1B9Mfnc9aqHSheYL1fewAK,2,Crawling In The Dark - Acoustic,N
+24,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4IH5J6MIW8rygpwG6T5Vk3,Is This The Day?,13,2010-01-01,day,album,6idMYWzsa9Y2wMtt2YUQYx,3,I Don't Think I Love You - Acoustic,N
+25,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4IH5J6MIW8rygpwG6T5Vk3,Is This The Day?,13,2010-01-01,day,album,2wVwxxZ2AgfjkdIuBpoEsi,4,Is This The Day? - Acoustic,N
+26,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4IH5J6MIW8rygpwG6T5Vk3,Is This The Day?,13,2010-01-01,day,album,4kesDH7AxSuALMT4j6c04m,5,Inside Of You - Acoustic,N
+27,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4IH5J6MIW8rygpwG6T5Vk3,Is This The Day?,13,2010-01-01,day,album,719i3CkBjqRHbQ4J8ncuaj,6,Running Away - Acoustic,N
+28,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4IH5J6MIW8rygpwG6T5Vk3,Is This The Day?,13,2010-01-01,day,album,2h2As7SOKjOGBqXKbNwhi8,7,The Reason - Acoustic,N
+29,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4IH5J6MIW8rygpwG6T5Vk3,Is This The Day?,13,2010-01-01,day,album,35RWnc6zIUNW1f7Gcy7fdA,8,My Turn - Acoustic,N
+30,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4IH5J6MIW8rygpwG6T5Vk3,Is This The Day?,13,2010-01-01,day,album,4aucEtqdT6NkdzZU2cwJCC,9,What I Meant To Say - Acoustic,N
+31,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4IH5J6MIW8rygpwG6T5Vk3,Is This The Day?,13,2010-01-01,day,album,2TYikUEZ901Qvb6tWbjc3U,10,If I Were You - Acoustic,N
+32,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4IH5J6MIW8rygpwG6T5Vk3,Is This The Day?,13,2010-01-01,day,album,0JINGLUUFyibKSfFIfUMnI,11,Tears Of Yesterday - Acoustic,N
+33,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4IH5J6MIW8rygpwG6T5Vk3,Is This The Day?,13,2010-01-01,day,album,7HVKbXtFcujjktMbF4Do4s,12,Pieces - Acoustic,N
+34,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4IH5J6MIW8rygpwG6T5Vk3,Is This The Day?,13,2010-01-01,day,album,0DtDmTkTCgcvY3bzBBIuG5,13,Same Direction - Acoustic,N
+35,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,1mYhnvcCnco4VKgg45wYKy,For(N)ever,13,2009-01-27,day,album,0wAcri6GxCVFgwSJ1z662X,1,My Turn,N
+36,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,1mYhnvcCnco4VKgg45wYKy,For(N)ever,13,2009-01-27,day,album,24PfsjdIb7BnRM9YNHU1cq,2,I Don't Think I Love You,N
+37,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,1mYhnvcCnco4VKgg45wYKy,For(N)ever,13,2009-01-27,day,album,6sZiOyb3yuSkQsm6R9YQjT,3,"So Close, So Far",N
+38,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,1mYhnvcCnco4VKgg45wYKy,For(N)ever,13,2009-01-27,day,album,2H7UaAhsigG72TNJzvfuU0,4,All About You,N
+39,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,1mYhnvcCnco4VKgg45wYKy,For(N)ever,13,2009-01-27,day,album,6R1IKoJb7a6HJgl6uoSRMf,5,The Letter,N
+40,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,1mYhnvcCnco4VKgg45wYKy,For(N)ever,13,2009-01-27,day,album,3FqzxBGt3vr3uUW3XFSCl7,6,Tears Of Yesterday,N
+41,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,1mYhnvcCnco4VKgg45wYKy,For(N)ever,13,2009-01-27,day,album,7sf5kvLh39dEayHu6dBc3b,7,Sick Of Hanging On,N
+42,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,1mYhnvcCnco4VKgg45wYKy,For(N)ever,13,2009-01-27,day,album,6b9NQEAZFG6Wu6sCRfQqZq,8,You're The One,N
+43,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,1mYhnvcCnco4VKgg45wYKy,For(N)ever,13,2009-01-27,day,album,70mvEVn48p13oxfxxvtfZ3,9,Who The Hell Am I?,N
+44,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,1mYhnvcCnco4VKgg45wYKy,For(N)ever,13,2009-01-27,day,album,7DC74qFf8xeMndk8R1fXw7,10,You Need To Be Here,N
+45,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,1mYhnvcCnco4VKgg45wYKy,For(N)ever,13,2009-01-27,day,album,4kzT3wkqyFVzyIfCYqQTkz,11,Gone Gone Gone,N
+46,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,1mYhnvcCnco4VKgg45wYKy,For(N)ever,13,2009-01-27,day,album,6pCLlW8IZwUsNK3vaLsTNt,12,Replace You,N
+47,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,1mYhnvcCnco4VKgg45wYKy,For(N)ever,13,2009-01-27,day,album,4JRdyqFAWHqEwjbXaiLYW5,13,Stay With Me,N
+48,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,7abFmxjon7NOQtNxgTJleB,Hoobastank: Live From The Wiltern,10,2009-01-01,day,album,4LXqwZyi4QgimRm83OpzeG,1,Crawling In The Dark - Live From The Wiltern,N
+49,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,7abFmxjon7NOQtNxgTJleB,Hoobastank: Live From The Wiltern,10,2009-01-01,day,album,4gJzHXf8bgzpdbwanlncen,2,Running Away - Live From The Wiltern,N
+50,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,7abFmxjon7NOQtNxgTJleB,Hoobastank: Live From The Wiltern,10,2009-01-01,day,album,0rXytMVxjUQM0pq5XY1TT3,3,All About You - Live From The Wiltern,N
+51,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,7abFmxjon7NOQtNxgTJleB,Hoobastank: Live From The Wiltern,10,2009-01-01,day,album,6G92DCkIUQiUJ2TDyc8ZOv,4,My Turn - Live From The Wiltern,N
+52,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,7abFmxjon7NOQtNxgTJleB,Hoobastank: Live From The Wiltern,10,2009-01-01,day,album,44KHGAGJiAGNTd8fCsU7d9,5,So Close So Far - Live From The Wiltern,N
+53,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,7abFmxjon7NOQtNxgTJleB,Hoobastank: Live From The Wiltern,10,2009-01-01,day,album,69TLH2X0M6Zyig88paujnU,6,The Letter - Live From The Wiltern,N
+54,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,7abFmxjon7NOQtNxgTJleB,Hoobastank: Live From The Wiltern,10,2009-01-01,day,album,3SRkb68JIrSwmXCsoQ6JA8,7,The First Of Me - Live From The Wiltern,N
+55,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,7abFmxjon7NOQtNxgTJleB,Hoobastank: Live From The Wiltern,10,2009-01-01,day,album,3cgFW1luvogicYSIAloxut,8,The Reason - Live From The Wiltern,N
+56,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,7abFmxjon7NOQtNxgTJleB,Hoobastank: Live From The Wiltern,10,2009-01-01,day,album,69kxi2UeD4ZgUJNjjtjDqM,9,You're The One - Live From The Wiltern,N
+57,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,7abFmxjon7NOQtNxgTJleB,Hoobastank: Live From The Wiltern,10,2009-01-01,day,album,756MJvWQm8GT7nRTia6JG7,10,Out Of Control - Live From The Wiltern,N
+58,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0ebHlMBgxjb7jtZ5Sv7rju,For(n)ever [International Version],11,2009-01-01,day,album,7LFcYqfUEh2R4xcs7pQiEp,1,My Turn,N
+59,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0ebHlMBgxjb7jtZ5Sv7rju,For(n)ever [International Version],11,2009-01-01,day,album,682IBp8K88KvEDtOuXAa52,2,I Don't Think I Love You,N
+60,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0ebHlMBgxjb7jtZ5Sv7rju,For(n)ever [International Version],11,2009-01-01,day,album,1wp3CDrrWUgFFCX3Ml0iys,3,"So Close, So Far",N
+61,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0ebHlMBgxjb7jtZ5Sv7rju,For(n)ever [International Version],11,2009-01-01,day,album,6OX2YaG34jMAW2o8puWm54,4,All About You,N
+62,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0ebHlMBgxjb7jtZ5Sv7rju,For(n)ever [International Version],11,2009-01-01,day,album,4iZMsOvhlaPfXYLHE6Xlog,5,The Letter - Int'l Version,N
+63,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0ebHlMBgxjb7jtZ5Sv7rju,For(n)ever [International Version],11,2009-01-01,day,album,7bvciLWVgulfGKVoul55yO,6,Tears Of Yesterday,N
+64,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0ebHlMBgxjb7jtZ5Sv7rju,For(n)ever [International Version],11,2009-01-01,day,album,650hmkxdIqONd2XU2ZlwUH,7,Sick Of Hanging On,N
+65,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0ebHlMBgxjb7jtZ5Sv7rju,For(n)ever [International Version],11,2009-01-01,day,album,4QtUIFCa3L4JyntSv5NFAc,8,You're The One,N
+66,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0ebHlMBgxjb7jtZ5Sv7rju,For(n)ever [International Version],11,2009-01-01,day,album,1gyJHlXiSm86mUcPcoynmC,9,Who The Hell Am I?,N
+67,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0ebHlMBgxjb7jtZ5Sv7rju,For(n)ever [International Version],11,2009-01-01,day,album,4uMXf6kKpdxzs0JN3VGH48,10,You Need To Be Here,N
+68,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0ebHlMBgxjb7jtZ5Sv7rju,For(n)ever [International Version],11,2009-01-01,day,album,4xh4kGjBa2hUFeuuYJ69Jr,11,Gone Gone Gone,N
+69,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6Z4FW5yorog5BtKsptAd47,Every Man For Himself (Expanded Edition),15,2006-05-08,day,album,05o9UxzIa3m2a30CWp2vkO,1,The Rules,N
+70,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6Z4FW5yorog5BtKsptAd47,Every Man For Himself (Expanded Edition),15,2006-05-08,day,album,2IUfNIVfC0mPl1CuWvpQdF,2,Born To Lead,N
+71,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6Z4FW5yorog5BtKsptAd47,Every Man For Himself (Expanded Edition),15,2006-05-08,day,album,3M8rVlvB37FRpxFArExvc8,3,Moving Forward,N
+72,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6Z4FW5yorog5BtKsptAd47,Every Man For Himself (Expanded Edition),15,2006-05-08,day,album,0L6kmDJVeToMyh8mKWjMeY,4,Inside Of You,N
+73,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6Z4FW5yorog5BtKsptAd47,Every Man For Himself (Expanded Edition),15,2006-05-08,day,album,74hYiIOg6GUTU12enSmndu,5,The First Of Me,N
+74,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6Z4FW5yorog5BtKsptAd47,Every Man For Himself (Expanded Edition),15,2006-05-08,day,album,4peMT79oZkjhldBXR45JRQ,6,Good Enough,N
+75,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6Z4FW5yorog5BtKsptAd47,Every Man For Himself (Expanded Edition),15,2006-05-08,day,album,53EmLZj7bKyyxUi2VlHOEc,7,If I Were You,N
+76,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6Z4FW5yorog5BtKsptAd47,Every Man For Himself (Expanded Edition),15,2006-05-08,day,album,7hH17WLxQlXuWgtmbLBURa,8,Without A Fight,N
+77,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6Z4FW5yorog5BtKsptAd47,Every Man For Himself (Expanded Edition),15,2006-05-08,day,album,0D0tcJe8nXp22XWgCfDUh8,9,Don't Tell Me,N
+78,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6Z4FW5yorog5BtKsptAd47,Every Man For Himself (Expanded Edition),15,2006-05-08,day,album,731w4hBUwSda5MP5s91M6V,10,Look Where We Are,N
+79,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6Z4FW5yorog5BtKsptAd47,Every Man For Himself (Expanded Edition),15,2006-05-08,day,album,5TuqEvAOEnN0vsS2Ivwb0x,11,Say The Same,N
+80,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6Z4FW5yorog5BtKsptAd47,Every Man For Himself (Expanded Edition),15,2006-05-08,day,album,7vDHr1fwofSkLyD7FuDg6g,12,If Only,N
+81,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6Z4FW5yorog5BtKsptAd47,Every Man For Himself (Expanded Edition),15,2006-05-08,day,album,0TlGJfYstEQ9b62vhWjwiG,13,More Than A Memory,N
+82,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6Z4FW5yorog5BtKsptAd47,Every Man For Himself (Expanded Edition),15,2006-05-08,day,album,6s36douU0V0igHm87NzsEi,14,Finally Awake - Bonus Track,N
+83,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6Z4FW5yorog5BtKsptAd47,Every Man For Himself (Expanded Edition),15,2006-05-08,day,album,0MvCS2OOfhog3JkYgCaBXQ,15,Waiting - Bonus Track,N
+84,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,4QVD4vVkYveZuO0xkyi6AX,1,Same Direction,N
+85,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,6mjHiGwrRGE8LVCXVc5QDU,2,Out Of Control,N
+86,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,7dy5PfRqjleudd0rVXpDEC,3,What Happened To Us?,N
+87,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,1UMB7K5nQEibtTZk685AS7,4,Escape,N
+88,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,2qF5tZolagQ0n9IVNly6zA,5,Just One,N
+89,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,7d9mp4cxad0VR8ZrycdkYP,6,Lucky,N
+90,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,0MsB2ol8VTiOkxoA8DdRrU,7,From The Heart,N
+91,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,77loZpT5Y5PRP1S451P9Yz,8,The Reason,N
+92,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,6OVSUa0WADhUCJ2pVI4zj6,9,Let It Out,N
+93,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,0OOvdyRJX2oAGRa0i9VO9l,10,Unaffected,N
+94,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,30tYWseEM3jCxaIbYf8Wq8,11,Never There,N
+95,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,3DJDgeHL1BuUsVZ9RvcEum,12,Disappear,N
+96,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,60sMKR8s0Zs8tXRqKsI8VX,13,The Reason - Acoustic,N
+97,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,3A7voo3sxm4uI72275LrYw,14,Force Feed Me,N
+98,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,4uQl7KDOBlkbZq8dQe7u1e,15,"Connected - From ""Halo 2"" Soundtrack",N
+99,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,7lfgu5rQjIAMcY8eszte5e,16,"Did You - From ""Spider Man 2"" Soundtrack",N
+100,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,2zE1YKY7Okj10Tjl09jjth,The Reason (15th Anniversary Deluxe),17,2003-12-09,day,album,5B3VntfpORwjuzPaB4LB25,17,Right Before Your Eyes,N
+101,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,1PJRDeZSoZk7gtisdTYfLi,1,Crawling In The Dark,N
+102,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,7hTpxUx9VhvBqbQKfHhJE0,2,Remember Me,N
+103,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,6xdSzlVVKW3fQidPxBImTG,3,Running Away,N
+104,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,23E89RwTXUiR2Tsk7cBZgy,4,Pieces,N
+105,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,5FV433LbKsaN49vDL8nK6x,5,Let You Know,N
+106,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,3stMplOiJU7KrsnYP6kNQA,6,Better,N
+107,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,5WqxcZy9x7bTfLn4UWLUSt,7,Ready For You,N
+108,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,1XuOgCaH6EfjpEBLgdJOme,8,Up And Gone,N
+109,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,4CprhZZQonU5QfO8ob8bNZ,9,Too Little Too Late,N
+110,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,65mbw660kxr0ajDo8ZiURm,10,Hello Again,N
+111,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,3GhoIJvAVNj3K2AZWdUgOS,11,To Be With You,N
+112,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,1z5UQ36z5fHX44PiDfqA2Q,12,Give It Back,N
+113,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,6Nv6Rn2CHOTdOq3axpmr2e,13,Losing My Grip - Japan Bonus Track,N
+114,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,4gIqMHzlygdpBwWMHOzdLx,14,The Critic - International Bonus Track,N
+115,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,3NTGuSxL6GLej7qJmjSKha,15,Never Saw It Coming - Non-Album Bonus Track,N
+116,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,4S3jl0eETp4QdVcz08OVCW,16,Open Your Eyes - Non-Album Bonus Track,N
+117,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,6ux7Ml2rEOD1k69ArDMiKt,17,Running Away - Acoustic Version / Non-Album Bonus Track,N
+118,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,75zh6Fy2AjDiIoquFvm8qP,18,Up And Gone - Acoustic Version / Non-Album Bonus Track,N
+119,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,7gYlL00fmquynwxm2YCqxF,19,Crawling In The Dark - Acoustic Version/ Non-Album Bonus Track,N
+120,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0NZrJM8gL8xBCsPR7nZGqR,Hoobastank (20th Anniversary Edition),20,2001,year,album,72aXhdklTdovejuTdwlZe0,20,Ready For You - Acoustic Version / Non-Album Bonus Track,N
+121,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4k4mM0EcXVIWK2AmfjA2jM,The Reason (Sped Up),2,2023-10-28,day,single,2b60OlaFCTM1JozxjnZEcq,1,The Reason - Sped Up,N
+122,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4k4mM0EcXVIWK2AmfjA2jM,The Reason (Sped Up),2,2023-10-28,day,single,1WfjOPfs4bjmwb0X5wANCS,2,The Reason,N
+123,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0QhhnlI6s8koVKyl9eYc5J,The Reason (Latin Version),1,2023-05-30,day,single,0aA4BSwowZCBd5SDRUqCav,1,The Reason - Latin Version,N
+124,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,4PGdPKa5zEocESACnrXoWS,The Reason,1,2022-03-25,day,single,3wA2DEGXcBAQlD5Q9LDlCF,1,The Reason,N
+125,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,1wPX89HNEWb6FIWcQDlV36,The Reason (Acoustic) / Right Before Your Eyes,2,2019-09-13,day,single,1CobuGL6ysSrfCE2tWcfFU,1,The Reason - Acoustic,N
+126,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,1wPX89HNEWb6FIWcQDlV36,The Reason (Acoustic) / Right Before Your Eyes,2,2019-09-13,day,single,5ryBL9tx3lrCxB6gwHqLzI,2,Right Before Your Eyes,N
+127,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6wyO9LxO2rckJhOtHA0PfH,Right Before Your Eyes,1,2019-08-16,day,single,47wRwMpDXvhQV9rbX1dWYz,1,Right Before Your Eyes,N
+128,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6ObLyrWLWX8HhXw6bS1nPQ,If I Were You,2,2006-01-01,day,single,5KfgB3VZQC4bl0ENen1sof,1,If I Were You - Radio Edit,N
+129,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,6ObLyrWLWX8HhXw6bS1nPQ,If I Were You,2,2006-01-01,day,single,5vLadSWXNRkHvusPAHwDyt,2,Same Direction - Acoustic - Radio Rockantenne,N
+130,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,7attIWlrWhiQrLLLJBMOg3,Disappear,2,2005,year,single,6IW1xPsmYVIMA0kdmfPBsk,1,Disappear - Radio Edit,N
+131,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,7attIWlrWhiQrLLLJBMOg3,Disappear,2,2005,year,single,5tM2tI0MI1tluJIV5G1lHk,2,Same Direction - Acoustic Version,N
+132,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0Ba9AGofkKOfYd5tKHNJpe,The Reason,3,2004-01-01,day,single,0SS7GzhJtJy13LunBz8bAl,1,The Reason,Y
+133,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0Ba9AGofkKOfYd5tKHNJpe,The Reason,3,2004-01-01,day,single,3LDKE7sSr0sJcbHFvugcf1,2,Meet Hoobastank,Y
+134,2MqhkhX4npxDZ62ObR5ELO,Hoobastank,0Ba9AGofkKOfYd5tKHNJpe,The Reason,3,2004-01-01,day,single,5BfgjWhKSgGB12HGQoRLtT,3,Crawling In The Dark - Acoustic Version/ Non-Album Bonus Track,Y
