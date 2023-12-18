@@ -2,6 +2,7 @@ import pandas as pd
 import sys, json, time, pprint
 
 print('-' * 50, 'start')
+print('params : birth, dream keyword, ')
 
 data_file_name = 'dream.csv'
 
@@ -21,5 +22,17 @@ print(len(dream_csv))
 #for row in enumerate(dream_csv):
 #    print(row)
 
+lstSer = []
+
+for idx, ser in dream_csv.iterrows():
+    print('-' * 40, idx)
+    print(ser["no1"])
+    if idx == 1097:
+        break;
+
 
 print('-' * 50, 'end')
+
+"""
+https://github.com/onlybooks/python-algorithm-interview?tab=readme-ov-file
+"""
