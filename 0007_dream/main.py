@@ -1,5 +1,6 @@
 import pandas as pd
-import sys, json, time, pprint
+from collections import Counter
+import sys, json, time, pprint, re
 
 print('-' * 50, 'start')
 print('params : birth, dream keyword, ')
@@ -23,16 +24,53 @@ print(len(dream_csv))
 #    print(row)
 
 lstSer = []
+lstBonus = []
 
 for idx, ser in dream_csv.iterrows():
-    print('-' * 40, idx)
-    print(ser["no1"])
-    if idx == 1097:
-        break;
+    lstSer.append(ser["no1"])
+    lstSer.append(ser["no2"])
+    lstSer.append(ser["no3"])
+    lstSer.append(ser["no4"])
+    lstSer.append(ser["no5"])
+    lstSer.append(ser["no6"])
+    lstBonus.append(ser["no7"])
 
+print('-' * 30)
+cnter = Counter(lstSer)
+#print(cnter.most_common(1)[0][0])
+
+print('-' * 30)
+bnCnter = Counter(lstBonus)
+#print(bnCnter.most_common(1)[0][0])
 
 print('-' * 50, 'end')
 
 """
 https://github.com/onlybooks/python-algorithm-interview?tab=readme-ov-file
 """
+
+# dream 별 숫자 데이터 수집...
+str = """
+        한글[123][11][22][33]★★★★
+    """
+strRegx = r'(\w+)+([\[+\d+\]]+)?+(\★+)?';
+p = re.compile(strRegx)
+
+strMatch = re.findall(strRegx, str)
+# print(strMatch)
+
+rx = r'\[+(\d+)+\]'
+
+# keyword로 데이터 정리
+for m in strMatch:
+    print('-' * 30, m)
+    if len(m) != 3:
+        print('continue ', m)
+    
+    # key, num, weight
+    stmp = re.findall(rx, m[1])
+    print('key =', m[0])
+    print('num =', stmp)
+    print('wgt =', m[2])
+
+
