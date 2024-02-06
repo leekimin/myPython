@@ -20,7 +20,7 @@ dream_csv = pd.read_csv(
 print(len(dream_csv))
 #print(dream_csv.loc[dream_csv.index == 1095]) # index value check
 
-#for row in enumerate(dream_csv):
+#for row in enumerate(dream_csv): 
 #    print(row)
 
 lstSer = []
