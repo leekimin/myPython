@@ -1,3 +1,11 @@
+# CSV List 조회
+# 생년월일 파라미터 ( 시간 분까지... )
+# Dream Keyword ( 여러개 입력 )
+# Dream keyword List ( 외부 데이터 활용 )
+# 바이오 리듬 체크
+# 추출 알고리즘
+# -- 관련 자료 텍스트로 모음 준비
+
 import pandas as pd
 from collections import Counter
 import sys, json, time, pprint, re
@@ -72,5 +80,6 @@ for m in strMatch:
     print('key =', m[0])
     print('num =', stmp)
     print('wgt =', m[2])
+    # data table structure save
 
 
