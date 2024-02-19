@@ -34,6 +34,7 @@ print(len(dream_csv))
 lstSer = []
 lstBonus = []
 
+# 객체 배열 사용해서 담기( key는 no )
 for idx, ser in dream_csv.iterrows():
     lstSer.append(ser["no1"])
     lstSer.append(ser["no2"])
@@ -45,7 +46,10 @@ for idx, ser in dream_csv.iterrows():
 
 print('-' * 30)
 cnter = Counter(lstSer)
-#print(cnter.most_common(1)[0][0])
+# print(cnter.most_common(1)[0][0])
+# print(cnter[34]) # 각 번호별로 몇개 나왔는지
+# print(cnter)
+
 
 print('-' * 30)
 bnCnter = Counter(lstBonus)
@@ -57,7 +61,7 @@ print('-' * 50, 'end')
 https://github.com/onlybooks/python-algorithm-interview?tab=readme-ov-file
 """
 
-# dream 별 숫자 데이터 수집...
+# dream 별 숫자 데이터 수집( 파일로 관리 )
 str = """
         한글[123][11][22][33]★★★★
     """
