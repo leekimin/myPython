@@ -64,7 +64,6 @@ print('-' * 30)
 # print(cnter[34]) # 각 번호별로 몇개 나왔는지
 # print(cnter)
 
-
 print('-' * 30)
 bnCnter = Counter(lstBonus)
 #print(bnCnter.most_common(1)[0][0])
