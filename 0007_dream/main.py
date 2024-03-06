@@ -32,20 +32,34 @@ print(len(dream_csv))
 #    print(row)
 
 lstSer = []
-lstBonus = []
 
-# 객체 배열 사용해서 담기( key는 no )
+# 객체 배열 사용해서 담기( key는 idx )
 for idx, ser in dream_csv.iterrows():
-    lstSer.append(ser["no1"])
-    lstSer.append(ser["no2"])
-    lstSer.append(ser["no3"])
-    lstSer.append(ser["no4"])
-    lstSer.append(ser["no5"])
-    lstSer.append(ser["no6"])
-    lstBonus.append(ser["no7"])
+    myData = {
+        "no": idx,
+        "no1": ser["no1"],
+        "no2": ser["no2"],
+        "no3": ser["no3"],
+        "no4": ser["no4"],
+        "no5": ser["no5"],
+        "no6": ser["no6"],
+        "no7": ser["no7"]
+    }
+    lstSer.append(myData)
+
+# 회차별 숫자 뽑기
+def findNo(no):
+    for data in lstSer:
+        if data["no"] == no:
+            return data;
+
+d = findNo(1100)
+print(d["no7"]);
 
 print('-' * 30)
-cnter = Counter(lstSer)
+# cnter = Counter(lstSer)
+
+# print(lstSer)
 # print(cnter.most_common(1)[0][0])
 # print(cnter[34]) # 각 번호별로 몇개 나왔는지
 # print(cnter)
