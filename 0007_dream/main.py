@@ -53,8 +53,11 @@ def findNo(no):
         if data["no"] == no:
             return data;
 
-d = findNo(1100)
-print(d["no7"]);
+d = findNo(1108)
+print(d)
+
+# 연속 출현 확률 45 * 1109
+# 
 
 print('-' * 30)
 # cnter = Counter(lstSer)
@@ -65,7 +68,7 @@ print('-' * 30)
 # print(cnter)
 
 print('-' * 30)
-bnCnter = Counter(lstBonus)
+# bnCnter = Counter(lstBonus)
 #print(bnCnter.most_common(1)[0][0])
 
 print('-' * 50, 'end')
