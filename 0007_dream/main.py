@@ -25,7 +25,7 @@ dream_csv = pd.read_csv(
 
 # column place
 # dream_csv.rename(columns={"회차":"no", "번호1":"no1"}, inplace=True)
-print(len(dream_csv))
+# print(len(dream_csv))
 #print(dream_csv.loc[dream_csv.index == 1095]) # index value check
 
 #for row in enumerate(dream_csv):
@@ -53,14 +53,32 @@ def findNo(no):
         if data["no"] == no:
             return data;
 
-d = findNo(1108)
-print(d)
+# d = findNo(1108)
+
+# 가장 최근 회차
+def findLastNo():
+    return max(lstSer, key=lambda v:v["no"]); # 특정 값의 max값 구하기
+
+lastLotto = findLastNo()
+print(lastLotto)
+# 6, 23, 8, 19, 12, 16
+# 6,8,12,16,19,23 > 고정
+
+lstNo6 = []
+for data in lstSer:
+    lstNo6.append(data["no6"])
+    if data["no6"] == 23:
+        print(data)
+
+#c = Counter(lstNo6)
+#print(c)
+print(180 / 50)
 
 # 연속 출현 확률 45 * 1109
 # 
 
 print('-' * 30)
-# cnter = Counter(lstSer)
+#cnter = Counter(lstSer)
 
 # print(lstSer)
 # print(cnter.most_common(1)[0][0])
