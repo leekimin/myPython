@@ -1,6 +1,7 @@
 # PDF 문자열 추출
 import fitz, pprint
 path = "kpi.pdf"
+path = "edu.pdf"
 doc = fitz.open(path)
 for page in doc:
     text = page.get_textpage()
