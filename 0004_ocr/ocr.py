@@ -37,4 +37,6 @@ image = 'test.png'
 # langs = pytesseract.get_languages(config='')
 # print(langs)
 
+# PDF에 이미지화 된 페이지 구성은 읽지 못함
+# 다른 방법 찾아서 할 것
 
