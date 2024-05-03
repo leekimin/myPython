@@ -1,38 +1,64 @@
 import requests
 # html 파일 읽어서 원하는 문구 추출 후 csv 저장
 from bs4 import BeautifulSoup
-import pprint, os, datetime, re
+import pprint, os, datetime, re, sys
 import pandas as pd
 
 # html 파일 목록 찾기
 path = "./Windows/"
-path_txt = "./Ubuntu/"
+path_txt = "./Windows/"
 file_list1 = os.listdir(path)
 file_list2 = os.listdir(path_txt)
 file_list_html = [file for file in file_list1 if file.endswith(".html")]
 file_list_txt = [file for file in file_list2 if file.endswith(".txt")]
 
+# 파일명 리스트 -> PC 스펙 정보로 문자열 취합
+# "a":{"cpu":"i7-1290KF", "gpu":"RTX 4070 Ti"} -> 이 형태로 만들고, CSV로 생성
+stansPc = {
+    
+}
+
+# key는 파일명 ( 직원명 or 서버명 포함이라 기준 삼음 )
+for f in file_list1:
+    stansPc[f] = {}
+
+"""
+stansPc["경영실_대여PC_2020-D-016.txt"] = {"cpu":"i7-1290KF", "gpu":"RTX 4070\r Ti"}
+
+p = pd.DataFrame.from_dict(stansPc)
+p.transpose()
+pprint.pprint(p.transpose())
+
+now = datetime.datetime.now()
+formatted_date = now.strftime("PC_%Y%m%d%H%M%S.csv")
+csv_file_name = formatted_date
+
+p.transpose().to_csv("./" + csv_file_name, encoding="CP949")
+
+sys.exit("Test 종료")
+"""
+
 # 찾을 문자열 Dictionary
 dicSearch = {
-    "ComName":"컴퓨터 이름:",
-    "ComBrand":"컴퓨터 브랜드:",
-    "OS":"운영 체제:",
-    "User":"현재 사용자 이름:",
+    "ComName":"컴퓨터 이름:",                   # O
+    "ComBrand":"컴퓨터 브랜드:",                # O
+    "OS":"운영 체제:",                          # O
+    "User":"현재 사용자 이름:",                 # O
     #"CpuCnt":"프로세서 패키지 수(물리적):",
-    "CpuBrand":"CPU 브랜드:",
+    "CpuBrand":"CPU 브랜드:",                   # O
     #"CpuCore":"프로세서 코어 수:",
     #"CpuThread":"논리 프로세서 수:",
     #"ProcessorName":"프로세서 이름:",
-    "MainboardModel":"마더보드 모델:",
-    "MainboardChipset":"마더보드 칩셋:",
+    "MainboardModel":"마더보드 모델:",           # O
+    "MainboardChipset":"마더보드 칩셋:",         # O
     #"BiosBender":"BIOS 제조업체:",
-    "Battery":"설계된 용량:",
-    "Memory":"총 메모리 크기:",
-    "MemoryChannel":"지원되는 메모리 채널:",
-    "MemoryActive":"활성 메모리 채널:",
-    "GpuName":"그래픽 칩셋:",
+    "Battery":"설계된 용량:",                    # O
+    "Memory":"총 메모리 크기:",                  # O
+    "MemoryChannel":"지원되는 메모리 채널:",      # O
+    "MemoryActive":"활성 메모리 채널:",           # O
+    "GpuName":"그래픽 칩셋:",                    # O
     #"GpuCard":"그래픽 카드:",
-    "Monitor":"모니터 이름(제조업체):",
+    "Monitor":"모니터 이름(제조업체):",           # O
     "DriveModel":"드라이브 모델:",
     "DriveSize":"드라이브 용량:",
     "NetworkCard":"네트워크 카드:",
@@ -253,6 +279,6 @@ now = datetime.datetime.now()
 formatted_date = now.strftime("PC_%Y%m%d%H%M%S.csv")
 csv_file_name = formatted_date
 
-p.to_csv("./" + csv_file_name, encoding="CP949")
+p.transpose().to_csv("./" + csv_file_name, encoding="CP949")
 
 
