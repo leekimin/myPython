@@ -1,7 +1,7 @@
 import requests
 # html 파일 읽어서 원하는 문구 추출 후 csv 저장
 from bs4 import BeautifulSoup
-import pprint, os, datetime, re, sys
+import pprint, os, datetime, re, sys, copy
 import pandas as pd
 
 # html 파일 목록 찾기
@@ -117,7 +117,39 @@ dicLinuxSearch = {
     #"NetworkSpeed":"최대 링크 속도:",
 }
 
+
+# 스탠스 관리 항목으로 추출해보자...
+dicStansSearch = {
+    "No":"no",
+    "부서":"",
+    "이름":"",
+    "모니터":"",
+    "데스크탑 여부":"",
+    "랩탑":"",
+    "컴퓨터 브랜드":"",
+    "태블릿":"",
+    "휴대폰":"",
+    "이동식 디스크":"",
+    "운영 체제":"",
+    "MSOffice":"",
+    "한글":"",
+    "AdobeCC":"",
+    "Unity":"",
+    "Figma":"",
+    "MAYA":"",
+    "Amold":"",
+    "Zbrush":"",
+    "3DMAX":"",
+    "SubstancePainter":"",
+    "기타 프로그램":"",
+    "관리자":"",
+    "PCSpec":"PC 스펙",
+    "PC 업데이트 사항":"",
+    "PC 부속품 업데이트 요청":"",
+}
+
 pc_list = {}
+stans_list = {}
 
 def getText(str):
     return BeautifulSoup(str, "html.parser")
@@ -135,8 +167,11 @@ def getHtmlParsing(html):
     lines = f.readlines()
     f.close()
     dic = {}
+    dic_stans = {}
+    ccc = 0
     for line in lines:
         for key in dicSearch:
+            ccc = ccc + 1
             if dicSearch[key] in line:
                 dic_new_key = dicSearch[key].replace(':', '')
                 cnt = dic.get(dic_new_key, 0)
@@ -146,6 +181,15 @@ def getHtmlParsing(html):
                     dic_new_key = dic_new_key + getKeyCount(dic, dic_new_key)
 
                 dic[dic_new_key] = getText(line).text.strip().split(':')[1]
+
+            if dicSearch[key] in line:
+                dic_new_key = dicSearch[key].replace(':', '')
+                cnt = dic_stans.get(dic_new_key, 0)
+
+                if type(cnt) is str:
+                    dic_stans[dic_new_key] = dic_stans[dic_new_key] + " \n" + getText(line).text.strip().split(':')[1]
+                else:
+                    dic_stans[dic_new_key] = getText(line).text.strip().split(':')[1]
 
         for key in dicEngSearch:
             if dicEngSearch[key] in line:
@@ -158,8 +202,37 @@ def getHtmlParsing(html):
                     dic_new_key = dic_new_key + getKeyCount(dic, dic_new_key)
 
                 dic[dic_new_key] = getText(line).text.strip().split(':')[1]
+
+            if dicEngSearch[key] in line:
+                dic_new_key = dicEngSearch[key].replace(':', '')
+                dic_new_key = dicSearch[key].replace(':', '')
+                cnt = dic_stans.get(dic_new_key, 0)
+
+                if type(cnt) is str:
+                    dic_stans[dic_new_key] = dic_stans[dic_new_key] + " \n" + getText(line).text.strip().split(':')[1]
+                else:
+                    dic_stans[dic_new_key] = getText(line).text.strip().split(':')[1]
     
     pc_list[html] = dic
+
+    #pprint.pprint(dic_stans)
+
+    dicStansSearchBackup = copy.deepcopy(dicStansSearch)
+
+    for key in dic_stans:
+        # dicStansSearch에 key가 없으면 PCSpec에 줄바꿈으로 등록
+        #print(key, dic_stans[key])
+
+        chk = dicStansSearchBackup.get(key, 0)
+        if type(chk) is str:
+            dicStansSearchBackup[key] = dic_stans[key]
+        else:
+            dicStansSearchBackup['PCSpec'] = dicStansSearchBackup['PCSpec'] + ' \n\t' + key + ' : ' + dic_stans[key]
+
+    # 가공해서 넣기
+    stans_list[html] = dicStansSearchBackup
+
+    # dicStansSearch = copy.deepcopy(dicStansSearchBackup)
 
 # 부품별 정규식 추출
 def getRegxDeviceName(strRegx, allTxt, idx):
@@ -239,15 +312,25 @@ def getTextParsing(txt):
 
     pc_list[txt] = dic
 
+    # 리스트 재정리
+    # stans_list[txt]
+
+
 # 파일별로 추출하기..( 윈도우에서 출력한 파일만 처리 )
 for html in file_list_html:
     print('*' * 50, html)
+    #if html == "경영지원실_신성희.html":
     getHtmlParsing(html) # Windows 계열
+    #print(stans_list)
+
     print('*' * 50, 'end')
+
+print(stans_list)
 
 for txt in file_list_txt:
     print('*' * 50, txt)
     # 잘못 추출했다.. 정규식 쓰자..
+    break
     getTextParsing(txt) # Linux 계열
     print('*' * 50, 'end')
 
@@ -272,7 +355,7 @@ print('*' * 10, 'end')
 # Ubuntu 계열은 파일 내용 보고 다시 파싱
 #print(pc_list)
 
-p = pd.DataFrame(pc_list)
+p = pd.DataFrame(stans_list)
 pprint.pprint(p)
 
 now = datetime.datetime.now()
