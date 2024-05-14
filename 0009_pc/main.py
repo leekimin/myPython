@@ -252,6 +252,8 @@ def getTextParsing(txt):
     f = open(path_txt + txt, "r", encoding="utf-8")
     lines_txt = f.readlines()
     f.close()
+
+    dic_stans = {}
     dic = {}
 
     # 전체 문자열( 정규식 찾기 위함 )
@@ -265,6 +267,7 @@ def getTextParsing(txt):
     strRegx = r'Hardware Class: graphics car(.+)(\s+)(.+)(\s+)Model: \"(.+)\"'
     dic_new_key = dicSearch['GpuName'].replace(':', '')
     dic[dic_new_key] = getRegxDeviceName(strRegx, allTxt, 4)
+    dic_stans[dic_new_key] = getRegxDeviceName(strRegx, allTxt, 4)
     # 그래픽 카드 end
 
     # 여러개도 고려해야함
@@ -272,18 +275,21 @@ def getTextParsing(txt):
     strRegx = r'Hardware Class: dis(.+)(\s+)(.+)(\s+)Model: \"(.+)\"'
     dic_new_key = dicSearch['DriveModel'].replace(':', '')
     dic[dic_new_key] = getRegxDeviceName(strRegx, allTxt, 4)
+    dic_stans[dic_new_key] = getRegxDeviceName(strRegx, allTxt, 4)
     # Disk end
 
     # network start
     strRegx = r'Hardware Class: network(\s+)(.+)(\s+)Model: \"(.+)\"'
     dic_new_key = dicSearch['NetworkCard'].replace(':', '')
     dic[dic_new_key] = getRegxDeviceName(strRegx, allTxt, 3)
+    dic_stans[dic_new_key] = getRegxDeviceName(strRegx, allTxt, 3)
     # network end
 
     # monitor start
     strRegx = r'Hardware Class: monitor(\s+)(.+)(\s+)Model: \"(.+)\"'
     dic_new_key = dicSearch['Monitor'].replace(':', '')
     dic[dic_new_key] = getRegxDeviceName(strRegx, allTxt, 3)
+    dic_stans[dic_new_key] = getRegxDeviceName(strRegx, allTxt, 3)
     # monitor end
 
     # Mainboard start
@@ -292,6 +298,7 @@ def getTextParsing(txt):
     strRegx2 = r'MODALIAS(.)+SystemVersion:rvn(.+):rn'
     dic_new_key = dicSearch['MainboardModel'].replace(':', '')
     dic[dic_new_key] = getRegxDeviceName(strRegx2, allTxt, 1) + ' ' + getRegxDeviceName(strRegx, allTxt, 1)
+    dic_stans[dic_new_key] = getRegxDeviceName(strRegx2, allTxt, 1) + ' ' + getRegxDeviceName(strRegx, allTxt, 1)
     # Mainboard end
 
     for line in lines_txt:
@@ -309,30 +316,65 @@ def getTextParsing(txt):
                     dic_new_key = dic_new_key + getKeyCount(dic, dic_new_key)
 
                 dic[dic_new_key] = getText(line).text.strip().split(':')[1]
+        
+            if dicLinuxSearch[key] in line:
+                dic_new_key = dicLinuxSearch[key].replace(':', '')
+                dic_new_key = dicSearch[key].replace(':', '')
+                cnt = dic_stans.get(dic_new_key, 0)
 
+                if type(cnt) is str:
+                    dic_stans[dic_new_key] = dic_stans[dic_new_key] + " \n" + getText(line).text.strip().split(':')[1]
+                else:
+                    dic_stans[dic_new_key] = getText(line).text.strip().split(':')[1]
+        
+        for key in dicEngSearch:
+            if dicEngSearch[key] in line:
+                dic_new_key = dicEngSearch[key].replace(':', '')
+                cnt = dic_stans.get(dic_new_key, 0)
+                print("dic_new_key : ", dic_new_key)
+
+                if type(cnt) is str:
+                    dic_stans[dic_new_key] = dic_stans[dic_new_key] + " \n" + getText(line).text.strip().split(':')[1]
+                else:
+                    dic_stans[dic_new_key] = getText(line).text.strip().split(':')[1]
+        
     pc_list[txt] = dic
 
     # 리스트 재정리
     # stans_list[txt]
+    dicStansSearchBackup = copy.deepcopy(dicStansSearch)
+
+    for key in dic_stans:
+        # dicStansSearch에 key가 없으면 PCSpec에 줄바꿈으로 등록
+        #print(key, dic_stans[key])
+
+        chk = dicStansSearchBackup.get(key, 0)
+        if type(chk) is str:
+            dicStansSearchBackup[key] = dic_stans[key]
+        else:
+            dicStansSearchBackup['PCSpec'] = dicStansSearchBackup['PCSpec'] + ' \n\t' + key + ' : ' + dic_stans[key]
+
+    # 가공해서 넣기
+    stans_list[txt] = dicStansSearchBackup
 
 
 # 파일별로 추출하기..( 윈도우에서 출력한 파일만 처리 )
 for html in file_list_html:
-    print('*' * 50, html)
     #if html == "경영지원실_신성희.html":
-    getHtmlParsing(html) # Windows 계열
-    #print(stans_list)
+        print('*' * 50, html)
+        getHtmlParsing(html) # Windows 계열
+        #print(stans_list)
 
-    print('*' * 50, 'end')
+        print('*' * 50, 'end')
 
-print(stans_list)
+# print(stans_list)
 
 for txt in file_list_txt:
-    print('*' * 50, txt)
     # 잘못 추출했다.. 정규식 쓰자..
-    break
-    getTextParsing(txt) # Linux 계열
-    print('*' * 50, 'end')
+    #if txt == "딥러닝엔진개발팀_학습서버.txt":
+        print('*' * 50, txt)
+        getTextParsing(txt) # Linux 계열
+        print('*' * 50, 'end')
 
 """ 정규식 테스트
 f = open(path_txt + txt, "r", encoding="utf-8")
@@ -356,7 +398,7 @@ print('*' * 10, 'end')
 #print(pc_list)
 
 p = pd.DataFrame(stans_list)
-pprint.pprint(p)
+# pprint.pprint(p)
 
 now = datetime.datetime.now()
 formatted_date = now.strftime("PC_%Y%m%d%H%M%S.csv")
